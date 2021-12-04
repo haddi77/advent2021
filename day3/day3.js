@@ -37,10 +37,13 @@ for (let i = 0; i < splitArray[0].length; i++) {
 //output answer to part 1
 console.log('The answer to part 1 is: ', parseInt(gammaArray.join(''),2) * parseInt(epsilonArray.join(''),2));
 
+
+//calculate part 2
 let ogArray = [...splitArray];
 let co2Array = [...splitArray];
 
 const columns = splitArray[0].length;
+
 
 while (ogArray.length > 1) {
   for (let i = 0; i < columns; i++) {
@@ -69,7 +72,7 @@ while (ogArray.length > 1) {
   break;
 }
 
-while (co2Array.length > 5) {
+while (co2Array.length > 1) {
   for (let i = 0; i < columns; i++) {
     let count = 0;
     for (let j = 0; j < co2Array.length; j++) {
@@ -97,6 +100,5 @@ while (co2Array.length > 5) {
   break;
 }
 
-console.log(ogArray[0].join(''));
-console.log(co2Array[0].join(''));
+//output answer to part 2
 console.log('Answer to part 2: ', parseInt(ogArray[0].join(''),2) * parseInt(co2Array[0].join(''),2));
