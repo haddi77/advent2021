@@ -8,7 +8,7 @@ const input = fs.readFileSync('input', 'utf8', (err, data) => {
                 return data;
               })
 
-const inputArray = input.split('\n');
+const inputArray = input.split('\r\n');
 
 //cast values to int for comparison
 const intArr = inputArray.map( (el) => {
